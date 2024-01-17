@@ -1,0 +1,14 @@
+<!-- product-list.component.html -->
+<div class="product-table">
+  <div class="product-item" *ngFor="let product of products">
+    <img [src]="product.thumbnail" alt="{{ product.name }}" class="product-thumbnail">
+    <div class="product-info">
+      <h2 class="product-name">{{ product.name }}</h2>
+      <p class="product-price">{{ product.price | currency:'EUR' }}</p>
+      <button class="product-button" (click)="addToCart(product)">
+        <img src="assets/images/addToCart.png" alt="Add to cart" class="button-icon">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>

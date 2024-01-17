@@ -1,0 +1,17 @@
+/* app.component.css or other global stylesheet */
+
+body {
+  background-image: url('../assets/images/background.jpg');
+  background-size: cover;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-container {
+  height: 100vh; /* Make the cart take the full height of the viewport */
+  width: 20%; /* Assuming the cart should take 20% of the screen width */
+  overflow-y: auto; /* Allow scrolling if the content exceeds the viewport height */
+}

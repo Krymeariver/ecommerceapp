@@ -1,0 +1,90 @@
+/* Assuming this container holds both the product-table and the cart */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Update the product-table to take up 4/5 of the main-container */
+.product-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* This will handle the spacing between items */
+  width: 80%; /* Now explicitly set to 80% of the container's width */
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin-right: 10px; /* Right margin to space it from the cart */
+  box-sizing: border-box;
+}
+
+.product-item {
+  border: 2px solid #ccc;
+  margin-bottom: 10px; /* Spacing between rows */
+  box-sizing: border-box;
+  width: calc(33.333% - 2*10px - 2*2px); /* Adjust the width calculation for padding and borders */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Add space between content and push the button to the bottom */
+  height: 320px; /* Fixed height to keep uniform size */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.product-thumbnail {
+  max-width: 90%;
+  max-height: 135px;
+  object-fit: contain;
+  margin: 5% auto;
+}
+
+.product-info {
+  text-align: center;
+  width: 100%;
+}
+
+.product-name, .product-price {
+  margin: 5px 0;
+}
+
+/* Center the button within product-item */
+.product-button {
+  background-color: #f8f8f8;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  margin: 10px auto 20px; /* Auto margins for horizontal centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66.666%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Style for the cart */
+.cart {
+  width: 20%; /* Set the cart to take up the remaining 1/5 of the space */
+  /* Add additional cart styles here */
+}
+
+/* Continue with responsive styles */
+@media (max-width: 768px) {
+  .product-item {
+    width: calc(50% - 2*10px - 2*2px); /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-item {
+    width: calc(100% - 2*10px - 2*2px); /* 1 item per row on very small screens */
+  }
+}

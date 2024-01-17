@@ -1,0 +1,31 @@
+
+.cart-container {
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin-left: 10px; /* Spacing from the product list */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table td {
+  padding: 5px;
+  text-align: left;
+}
+
+.cart-thumbnail {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.cart-total {
+  text-align: right;
+  padding: 10px;
+  border-top: 1px solid #ccc; /* Separator for the total */
+  margin-top: 10px;
+}
